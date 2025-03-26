@@ -11,7 +11,6 @@ function convertToObject(sourceString) {
     .filter((line) => line.includes(':'))
     .map((line) => {
       const [key, value] = line.split(':');
-
       return { [key.trim()]: value.trim() };
     })
     .reduce(
